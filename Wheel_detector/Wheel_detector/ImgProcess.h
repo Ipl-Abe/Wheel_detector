@@ -37,7 +37,7 @@ void RemoveEdge2(cv::Mat *img);
 
 
 void OnImageProcessing(cv::Mat3b* src, cv::Mat1b*, cv::Mat1b*);
-void storEdge(std::vector<cv::Point2i> &, cv::Mat1b *);
+void storeEdges(std::vector<cv::Point2i> &, cv::Mat1b *);
 std::vector<Tangent>  deriveTangent(std::vector<Tangent> &Tan, std::vector<cv::Point2i> &, cv::Mat1b *);
 void derive_Theta_R(std::vector<cv::Point2i> &, cv::Point2i &, int *, std::vector<int> &);
 void calculate_center(cv::Point2i *c, cv::Point2i *e1, cv::Point2i *e2, int *vote, std::vector<int> &rad);
