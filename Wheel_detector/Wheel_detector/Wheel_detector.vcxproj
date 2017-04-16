@@ -76,7 +76,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ImgProcess.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ellipse.h" />
+    <ClInclude Include="est.h" />
+    <ClInclude Include="EST_El.h" />
+    <ClInclude Include="ImgProcess.h" />
+    <ClInclude Include="Tangent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
