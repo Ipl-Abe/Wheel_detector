@@ -25,7 +25,6 @@ if (!img.data){
 
 cv::resize(img,img,cv::Size(),0.05,0.05); //画像のリサイズ
 
-
 colorExtraction(&img, &Mask, CV_BGR2HSV, 0, 180, 70, 255, 70, 255); //アーム色抽出
 cv::Mat1b gray;	//グレースケール用変数
 cv::cvtColor(img, gray, CV_BGR2GRAY); //グレー画像変数
@@ -47,7 +46,6 @@ cv::createTrackbar("c2", "colorExt", &c_value, 255);
 //		break;
 //	}
 //}
-
 
 
 cv::Canny(gray, canny, 97, 166, 3, false);//@comment cannyフィルタ
