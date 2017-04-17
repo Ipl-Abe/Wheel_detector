@@ -29,7 +29,7 @@ std::vector<cv::Point2i> vote_center(std::vector<std::vector<int>> &arr, std::ve
 
 std::vector<El> Hough_Ellipse(std::vector<cv::Point2f> HC, cv::Mat* img);
 void Estimate_Ellipse(std::vector<EdgeInf> &EI, std::vector<EST_El> &Es);
-void Hough_EllipseD(std::vector<cv::Point2i> &HC, std::vector<El> &e, cv::Mat* img);
+void Hough_EllipseD(cv::Mat3b* src, std::vector<cv::Point2i> &HC, std::vector<El> &e, cv::Mat* img);
 bool cmp(cv::Point3i A, cv::Point3i B);
 void RemoveEdge(cv::Mat *img);
 void RemoveEdge2(cv::Mat *img);
@@ -47,7 +47,7 @@ double dot_product(cv::Point2i vl, cv::Point2i vr);
 double AngleOf2Vector(cv::Point2i A, cv::Point2i B);
 
 void calculate_theta(cv::Point2f *c, cv::Point2f *e1, cv::Point2f *e2, int *vote);
-void est_EllipseCenter(std::vector<Tangent> &Tan, cv::Mat1b *bin_img, std::vector<cv::Point2i> &C);
+void est_EllipseCenter(cv::Mat3b *src, std::vector<Tangent> &Tan, cv::Mat1b *bin_img, std::vector<cv::Point2i> &C);
 
 
 
@@ -57,7 +57,7 @@ inline bool cmp2ix(cv::Point2i A, cv::Point2i B);
 inline bool cmp2iy(cv::Point2i A, cv::Point2i B);
 
 
-void vote_Center(std::vector<EST_El> &El, cv::Mat1b *bin, std::vector<cv::Point2i> &C);
+void vote_Center(cv::Mat3b* src, std::vector<EST_El> &El, cv::Mat1b *bin, std::vector<cv::Point2i> &C);
 
 void dst_center(std::vector<cv::Point2i> &c_set, std::vector<EST_El> &El, std::vector<cv::Point2i> &C);
 

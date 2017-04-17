@@ -40,7 +40,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)\Library\opencv3\build\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Library|\opencv3\build\x86\vc12\lib;$(VC_Library_x86);$(WindowsSDK_Librarypath_x86);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\Library\opencv3\build\x86\vc12\lib;$(VC_Library_x86);$(WindowsSDK_Librarypath_x86);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)\Library\opencv3\build\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
@@ -72,12 +72,16 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies />
+      <AdditionalDependencies>opencv_world300.lib;opencv_ts300.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="est.cpp" />
+    <ClCompile Include="EST_El.cpp" />
     <ClCompile Include="ImgProcess.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Tangent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ellipse.h" />

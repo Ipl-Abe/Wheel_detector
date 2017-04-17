@@ -34,9 +34,9 @@ cv::GaussianBlur(gray, gray, cv::Size(3, 3), 2, 2); //ガウシアンフィルタ
 int d_value = 0;  //色抽出パラメータ1
 int c_value = 0;  //色抽出パラメータ2
 
-cv::namedWindow("colorExt", 1);
-cv::createTrackbar("c1", "colorExt", &d_value, 255);
-cv::createTrackbar("c2", "colorExt", &c_value, 255);
+//cv::namedWindow("colorExt", 1);
+//cv::createTrackbar("c1", "colorExt", &d_value, 255);
+//cv::createTrackbar("c2", "colorExt", &c_value, 255);
 
 //while (1){
 //	cv::Canny(gray, canny, d_value,c_value, 3, false);//@comment cannyフィルタ
